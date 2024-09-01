@@ -1,9 +1,7 @@
 import { work } from "./action";
 import { NONE } from "./contstant";
 
-export default function enhance(clazz, ...extensions) {
-    clazz.prototype.extensions = extensions;
-
+export default function enhance(clazz) {
     clazz.prototype.parent = null;
 
     clazz.prototype.first = null;
