@@ -48,16 +48,23 @@ export default function enhance(clazz) {
     };
     
     clazz.prototype.attach = function() {
-        const parent = this.parent;
-        if (parent.last === this) {
-            parent.element.append(this.element);
-        } else {
-            if (this.next.action !== NONE) {
-                work(this.next);
+        try {
+            const parent = this.parent;
+            if (parent.last === this) {
+                parent.element.append(this.element);
+            } else {
+                if (this.next.action !== NONE) {
+                    work(this.next);
+                }
+                parent.element.insertBefore(this.element, this.next.element);
             }
-            parent.element.insertBefore(this.element, this.next.element);
+            return this;
+        } catch (e) {
+            console.log(parent);
+            console.log(this);
+            throw new Error(e);
         }
-        return this;
+
     };
     
     clazz.prototype.ditach = function() {

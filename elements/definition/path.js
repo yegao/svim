@@ -1,9 +1,9 @@
-import { CONTAINER } from '../../contstant';
+import { DEFINITION } from '../../contstant';
 import enhance from '../../enhance';
 
-function G(element = document.createElement("g")) {
-    this.c1 = CONTAINER;
+function path(element = document.createElement("path")) {
+    this.c1 = DEFINITION;
     this.element = element;
 }
 
-export default enhance(G);
+export default enhance(path);

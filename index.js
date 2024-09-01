@@ -4,8 +4,8 @@ import Desc from './elements/description/desc';
 import Metadata from './elements/description/metadata';
 import Title from './elements/description/title';
 import Rect from './elements/shape/rect';
-import Text from './elements/text/text';
-import Tspan from './elements/text/tspan';
+import Text from './elements/container/text';
+import Tspan from './elements/container/tspan';
 
 function Svim(namespace = 'http://www.w3.org/2000/svg') {
     this.namespace = namespace;
@@ -45,5 +45,7 @@ Svim.prototype.tspan = function(element) {
 };
 
 export * from './action';
+
+export * from './components/rect-content';
 
 export default Svim;
