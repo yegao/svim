@@ -3,6 +3,17 @@ import { NONE, ATTACH, DETACH } from './contstant';
 let pool = new Set();
 let locking = false;
 
+export const channelTaskQueue = [];
+const channel = new MessageChannel();
+const port1 = channel.port1;
+const port2 = channel.port2;
+port1.onmessage = () => {
+    for (let len = channelTaskQueue.length, i = len - 1; i >= 0; i--) {
+        channelTaskQueue[i]();
+        channelTaskQueue.pop();
+    }
+}
+
 export function work(stuff) {
     switch (stuff.action) {
         case ATTACH: {
@@ -25,6 +36,9 @@ function flush(stuff) {
     queueMicrotask(() => {
         for (let stuff of pool) {
             work(stuff);
+        }
+        if (channelTaskQueue.length > 0) {
+            port2.postMessage(null);
         }
         locking = false;
     });

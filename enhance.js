@@ -27,6 +27,7 @@ export default function enhance(clazz) {
         for (let key in o) {
             this.element.setAttribute(key, o[key]);
         }
+        return this;
     }
 
     clazz.prototype.viewBox = function(x, y, width, height, preserveAspectRatio = 'xMidYMid meet') {
@@ -64,7 +65,6 @@ export default function enhance(clazz) {
             console.log(this);
             throw new Error(e);
         }
-
     };
     
     clazz.prototype.ditach = function() {

@@ -1,7 +1,7 @@
 import { GRAPHIC } from '../../contstant';
 import enhance from '../../enhance';
 
-function desc(element = document.createElement('desc')) {
+function desc(element = document.createElementNS('http://www.w3.org/2000/svg', 'desc')) {
     this.c1 = GRAPHIC;
     this.element = element
 }
