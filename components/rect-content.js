@@ -3,7 +3,7 @@ import g from '../elements/container/g';
 import text from '../elements/container/text';
 import rect from '../elements/shape/rect';
 import content from '../elements/shape/content';
-let index = 0;
+
 export function rectWithContent(data, option = { deltaX: 5 }) {
     const _g = new g();
     const _text = new text();
@@ -26,7 +26,6 @@ export function rectWithContent(data, option = { deltaX: 5 }) {
                 'transform-origin': originX + " " + (rectbox.y + (rectbox.height >> 1)),
                 'x': originX,
                 'y': rectbox.y + (rectbox.height >> 1),
-                fill: 'white',
                 'text-anchor': 'start',
                 'dominant-baseline': 'central'
             });
@@ -34,7 +33,6 @@ export function rectWithContent(data, option = { deltaX: 5 }) {
             _text.setAttributes({
                 'x': rectbox.x + deltaX,
                 'y': rectbox.y + (rectbox.height >> 1),
-                fill: 'white',
                 'text-anchor': 'start',
                 'dominant-baseline': 'central'
             });
