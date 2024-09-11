@@ -18,6 +18,23 @@ export default function enhance(clazz) {
 
     clazz.prototype.listeners = [];
 
+    clazz.prototype.getAttribute = function(key) {
+        return this.element.getAttribute(key);
+    }
+
+    clazz.prototype.getAttributes = function() {
+        const keys = this.getAttributeNames();
+        const attributes = Object.create(null);
+        for (let key of keys) {
+            attributes[key] = element.getAttribute(key);
+        }
+        return attributes;
+    }
+
+    clazz.prototype.getAttributeNames = function() {
+        return this.element.getAttributeNames();
+    }
+
     clazz.prototype.setAttribute = function(...args) {
         this.element.setAttribute(...args);
         return this;
