@@ -1,4 +1,4 @@
-import { append, rectWithContent } from './node_modules/svim/index.js';
+import { append, rectWithContent } from './svim/index.js';
 import { createItem } from './item.js';
 
 export function groupObject(transformed, option = {title: '', width: 100, height: 30}, svim) {

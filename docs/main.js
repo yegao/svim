@@ -1,4 +1,4 @@
-import Svim, { append } from './node_modules/svim/index.js';
+import Svim, { append } from './svim/index.js';
 import { groupObject } from './group.js';
 import { transformObject } from './transform.js';
 

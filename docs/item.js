@@ -1,4 +1,4 @@
-import { append, rectWithContent } from './node_modules/svim/index.js';
+import { append, rectWithContent } from './svim/index.js';
 
 export function createItem(key, value, type, description, svim) {
   switch (type) {
