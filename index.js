@@ -1,11 +1,11 @@
-import Svg from './elements/container/svg';
-import G from './elements/container/g';
-import Desc from './elements/description/desc';
-import Metadata from './elements/description/metadata';
-import Title from './elements/description/title';
-import Rect from './elements/shape/rect';
-import Text from './elements/container/text';
-import Tspan from './elements/container/tspan';
+import Svg from './elements/container/svg.js';
+import G from './elements/container/g.js';
+import Desc from './elements/description/desc.js';
+import Metadata from './elements/description/metadata.js';
+import Title from './elements/description/title.js';
+import Rect from './elements/shape/rect.js';
+import Text from './elements/container/text.js';
+import Tspan from './elements/container/tspan.js';
 
 function Svim(namespace = 'http://www.w3.org/2000/svg') {
     this.namespace = namespace;
@@ -44,8 +44,8 @@ Svim.prototype.tspan = function(element) {
     return new Tspan(element);
 };
 
-export * from './action';
+export * from './action.js';
 
-export * from './components/rect-content';
+export * from './components/rect-content.js';
 
 export default Svim;

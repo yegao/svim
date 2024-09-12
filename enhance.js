@@ -1,5 +1,5 @@
-import { work } from "./action";
-import { NONE } from "./contstant";
+import { work } from "./action.js";
+import { NONE } from "./contstant.js";
 
 export default function enhance(clazz) {
     clazz.prototype.parent = null;

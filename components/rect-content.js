@@ -1,8 +1,8 @@
-import { append, channelTaskQueue } from '../action';
-import g from '../elements/container/g';
-import text from '../elements/container/text';
-import rect from '../elements/shape/rect';
-import content from '../elements/shape/content';
+import { append, channelTaskQueue } from '../action.js';
+import g from '../elements/container/g.js';
+import text from '../elements/container/text.js';
+import rect from '../elements/shape/rect.js';
+import content from '../elements/shape/content.js';
 
 export function rectWithContent(data, option = { deltaX: 5 }) {
     const _g = new g();

@@ -1,6 +1,6 @@
-// import { append } from '../action';
-// import defs from '../elements/container/defs';
-// import marker from '../elements/container/marker';
+// import { append } from '../action.js';
+// import defs from '../elements/container/defs.js';
+// import marker from '../elements/container/marker.js';
 
 // // 箭头形状
 // // <defs>  

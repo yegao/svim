@@ -1,4 +1,4 @@
-import { NONE, ATTACH, DETACH } from './contstant';
+import { NONE, ATTACH, DETACH } from './contstant.js';
 
 let pool = new Set();
 let locking = false;
